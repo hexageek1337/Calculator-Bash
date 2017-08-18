@@ -12,4 +12,4 @@ $ sed -i 's/\r//' calculator.sh **or** dos2unix calculator.sh<br>
 $ ./calculator.sh
 # :heavy_exclamation_mark: Required
 - Wget
-- Dos2unix (for [Cygwin] (https://cygwin.com/install.html))
+- Dos2unix ( for [Cygwin](https://cygwin.com/install.html) )
