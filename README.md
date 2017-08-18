@@ -1,14 +1,14 @@
 # Calculator-Bash
 Calculating number with Shell Script ( Bash )
 # Usage
-- Linux
-$ wget https://raw.githubusercontent.com/hexageek1337/Calculator-Bash/master/calculator.sh -O calculator.sh
-$ chmod +x calculator.sh
+- Linux<br>
+$ wget https://raw.githubusercontent.com/hexageek1337/Calculator-Bash/master/calculator.sh -O calculator.sh<br>
+$ chmod +x calculator.sh<br>
 $ ./calculator.sh
-- Windows with Cygwin
-$ wget https://raw.githubusercontent.com/hexageek1337/Calculator-Bash/master/calculator.sh -O calculator.sh
-$ chmod +x calculator.sh
-$ sed -i 's/\r//' calculator.sh **or** dos2unix calculator.sh
+- Windows with Cygwin<br>
+$ wget https://raw.githubusercontent.com/hexageek1337/Calculator-Bash/master/calculator.sh -O calculator.sh<br>
+$ chmod +x calculator.sh<br>
+$ sed -i 's/\r//' calculator.sh **or** dos2unix calculator.sh<br>
 $ ./calculator.sh
 # :heavy_exclamation_mark: Required
 - Wget
