@@ -8,11 +8,11 @@ do
     red="\e[0;31m"
     green="\e[0;32m"
     off="\e[0m"
-    # Sambutan
+    # Sambutan Banner
     echo -e "\n        \033[96m0000000000000000\033[0m  \033[92m000000000000000000+\033[0m \033[31m____ ↘\033[0m \n        \033[96m000000000000000\033[0m  \033[92m0000000000000000000+\033[0m \033[31m¯¯¯¯ ↗\033[0m \n        \033[96m000       0000\033[0m  \033[92m00      0+\033[0m\n                 \033[96m0000\033[0m   \033[92m00      0+\033[0m\n                \033[96m0000\033[0m     \033[92m0     0+\033[0m\n               \033[96m0000\033[0m           \033[92m0+\033[0m\n              \033[96m000\033[0m   \033[92m0000000000+\033[0m\n             \033[96m0000+\033[0m\n            \033[96m0000+\033[0m        \033[92m###################\033[0m\n          \033[96m00000+\033[0m         \033[92m#\033[0m \033[97mCalculator Bash\033[0m \033[92m#\033[0m\n         \033[96m0000000+\033[0m        \033[92m###################\033[0m\n        \033[96m000000007;\033[0m          \033[92mCoded by H3xagon\033[0m\n"
     # Fungsi pilih operator matematika
     echo -e "$green [+] Pilih nomor operator mathematic anda : $off\n"
-    select math in Pertambahan Pengurangan Perkalian Pembagian Modulus Exponentiation Custom
+    select math in Pertambahan Pengurangan Perkalian Pembagian Modulus Exponentiation Increment Decrement Custom Exit
     do
         #Fungsi penyeleksian operator matematika
         case "$math" in
@@ -95,6 +95,32 @@ do
             read num2
             # Fungsi menentukan hasil matematika
             result=$[num1**num2]
+            echo "=================================="
+            echo "Jawaban : $result"
+            echo "=================================="
+            break
+        ;;
+        Increment)
+            # Fungsi input angka yang akan di hitung
+            echo "=================================="
+            echo "Masukan angka :"
+            read num1
+            # Fungsi menentukan hasil matematika
+            result=$[num1++]
+            result=$[num1++]
+            echo "=================================="
+            echo "Jawaban : $result"
+            echo "=================================="
+            break
+        ;;
+        Decrement)
+            # Fungsi input angka yang akan di hitung
+            echo "=================================="
+            echo "Masukan angka :"
+            read num1
+            # Fungsi menentukan hasil matematika
+            result=$[num1--]
+            result=$[num1--]
             echo "=================================="
             echo "Jawaban : $result"
             echo "=================================="
@@ -292,11 +318,15 @@ do
                 echo "=================================="
             else
                 # Fungsi jika input penggunaan operator melibihi batas penentuan
-                echo -e "\033[31m=========================================\033[0m"
-                echo -e "\033[31mMohon maaf maximal 6 penggunaan operator\033[0m"
-                echo -e "\033[31m=========================================\033[0m"
+                echo -e "\033[31m=========================================================\033[0m"
+                echo -e "\033[31mMohon maaf penggunaan operator yang tersedia hanya 2 - 6\033[0m"
+                echo -e "\033[31m=========================================================\033[0m"
             fi
             break
+        ;;
+        Exit)
+            # Fungsi keluar dari Kalkulator Bash
+            exit
         ;;
         *)
             # Fungsi ketika salah pilih operator matematika
