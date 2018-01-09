@@ -19,10 +19,10 @@ do
         Pertambahan)
             # Fungsi input angka yang akan di hitung
             echo "=================================="
-            echo "Masukan angka pertama :"
-            read num1
-            echo "Masukan angka kedua :"
-            read num2
+            for (( i = 1; i <= 2; i=i+1 )); do
+                echo "Masukan angka ke-$i :"
+                read num$i
+            done
             # Fungsi menentukan hasil matematika
             result=$[num1+num2]
             echo "=================================="
@@ -33,10 +33,10 @@ do
         Pengurangan)
             # Fungsi input angka yang akan di hitung
             echo "=================================="
-            echo "Masukan angka pertama :"
-            read num1
-            echo "Masukan angka kedua :"
-            read num2
+            for (( i = 1; i <= 2; i=i+1 )); do
+                echo "Masukan angka ke-$i :"
+                read num$i
+            done
             # Fungsi menentukan hasil matematika
             result=$[num1-num2]
             echo "=================================="
@@ -47,10 +47,10 @@ do
         Perkalian)
             # Fungsi input angka yang akan di hitung
             echo "=================================="
-            echo "Masukan angka pertama :"
-            read num1
-            echo "Masukan angka kedua :"
-            read num2
+            for (( i = 1; i <= 2; i=i+1 )); do
+                echo "Masukan angka ke-$i :"
+                read num$i
+            done
             # Fungsi menentukan hasil matematika
             result=$[num1*num2]
             echo "=================================="
@@ -61,10 +61,10 @@ do
         Pembagian)
             # Fungsi input angka yang akan di hitung
             echo "=================================="
-            echo "Masukan angka pertama :"
-            read num1
-            echo "Masukan angka kedua :"
-            read num2
+            for (( i = 1; i <= 2; i=i+1 )); do
+                echo "Masukan angka ke-$i :"
+                read num$i
+            done
             # Fungsi menentukan hasil matematika
             result=$[num1/num2]
             echo "=================================="
@@ -75,10 +75,10 @@ do
         Modulus)
             # Fungsi input angka yang akan di hitung
             echo "=================================="
-            echo "Masukan angka pertama :"
-            read num1
-            echo "Masukan angka kedua :"
-            read num2
+            for (( i = 1; i <= 2; i=i+1 )); do
+                echo "Masukan angka ke-$i :"
+                read num$i
+            done
             # Fungsi menentukan hasil matematika
             result=$[num1%num2]
             echo "=================================="
@@ -89,10 +89,10 @@ do
         Exponentiation)
             # Fungsi input angka yang akan di hitung
             echo "=================================="
-            echo "Masukan angka pertama :"
-            read num1
-            echo "Masukan angka kedua :"
-            read num2
+            for (( i = 1; i <= 2; i=i+1 )); do
+                echo "Masukan angka ke-$i :"
+                read num$i
+            done
             # Fungsi menentukan hasil matematika
             result=$[num1**num2]
             echo "=================================="
@@ -135,12 +135,10 @@ do
             if [[ $jumlahoperator == "2" ]]; then
                 # Fungsi input angka yang akan di hitung
                 echo "=================================="
-                echo "Masukan angka pertama :"
-                read num1
-                echo "Masukan angka kedua :"
-                read num2
-                echo "Masukan angka ketiga :"
-                read num3
+                for (( i = 1; i <= 3; i=i+1 )); do
+                    echo "Masukan angka ke-$i :"
+                    read num$i
+                done
                 # Fungsi urutan operator
                 echo "=================================="
                 echo "[/\] Tentukan urutan operator :"
@@ -151,12 +149,12 @@ do
                 echo "[+] % untuk Modulus"
                 echo "[+] ** untuk Exponentiation"
                 echo "=================================="
-                echo "[?] Operator pertama :"
-                read op1
-                echo "[?] Operator kedua :"
-                read op2
+                for (( i = 1; i <= 2; i=i+1 )); do
+                    echo "[?] Operator ke-$i :"
+                    read hop$i
+                done
                 # Fungsi menentukan hasil matematika
-                result=$[num1 $op1 num2 $op2 num3]
+                result=$[num1 $hop1 num2 $hop2 num3]
                 echo "=================================="
                 echo "Jawaban : $result"
                 echo "=================================="
@@ -164,14 +162,10 @@ do
             elif [[ $jumlahoperator == "3" ]]; then
                 # Fungsi input angka yang akan di hitung
                 echo "=================================="
-                echo "Masukan angka pertama :"
-                read num1
-                echo "Masukan angka kedua :"
-                read num2
-                echo "Masukan angka ketiga :"
-                read num3
-                echo "Masukan angka keempat :"
-                read num4
+                for (( i = 1; i <= 4; i=i+1 )); do
+                    echo "Masukan angka ke-$i :"
+                    read num$i
+                done
                 # Fungsi urutan operator
                 echo "=================================="
                 echo "[/\] Tentukan urutan operator :"
@@ -182,14 +176,12 @@ do
                 echo "[+] % untuk Modulus"
                 echo "[+] ** untuk Exponentiation"
                 echo "=================================="
-                echo "[?] Operator pertama :"
-                read op1
-                echo "[?] Operator kedua :"
-                read op2
-                echo "[?] Operator ketiga :"
-                read op3
+                for (( i = 1; i <= 3; i=i+1 )); do
+                    echo "[?] Operator ke-$i :"
+                    read hop$i
+                done
                 # Fungsi menentukan hasil matematika
-                result=$[num1 $op1 num2 $op2 num3 $op3 num4]
+                result=$[num1 $hop1 num2 $hop2 num3 $hop3 num4]
                 echo "=================================="
                 echo "Jawaban : $result"
                 echo "=================================="
@@ -197,16 +189,10 @@ do
             elif [[ $jumlahoperator == "4" ]]; then
                 # Fungsi input angka yang akan di hitung
                 echo "=================================="
-                echo "Masukan angka pertama :"
-                read num1
-                echo "Masukan angka kedua :"
-                read num2
-                echo "Masukan angka ketiga :"
-                read num3
-                echo "Masukan angka keempat :"
-                read num4
-                echo "Masukan angka kelima :"
-                read num5
+                for (( i = 1; i <= 5; i=i+1 )); do
+                    echo "Masukan angka ke-$i :"
+                    read num$i
+                done
                 # Fungsi urutan operator
                 echo "=================================="
                 echo "[/\] Tentukan urutan operator :"
@@ -217,16 +203,12 @@ do
                 echo "[+] % untuk Modulus"
                 echo "[+] ** untuk Exponentiation"
                 echo "=================================="
-                echo "[?] Operator pertama :"
-                read op1
-                echo "[?] Operator kedua :"
-                read op2
-                echo "[?] Operator ketiga :"
-                read op3
-                echo "[?] Operator keempat :"
-                read op4
+                for (( i = 1; i <= 4; i=i+1 )); do
+                    echo "[?] Operator ke-$i :"
+                    read hop$i
+                done
                 # Fungsi menentukan hasil matematika
-                result=$[num1 $op1 num2 $op2 num3 $op3 num4 $op4 num5]
+                result=$[num1 $hop1 num2 $hop2 num3 $hop3 num4 $hop4 num5]
                 echo "=================================="
                 echo "Jawaban : $result"
                 echo "=================================="
@@ -234,18 +216,10 @@ do
             elif [[ $jumlahoperator == "5" ]]; then
                 # Fungsi input angka yang akan di hitung
                 echo "=================================="
-                echo "Masukan angka pertama :"
-                read num1
-                echo "Masukan angka kedua :"
-                read num2
-                echo "Masukan angka ketiga :"
-                read num3
-                echo "Masukan angka keempat :"
-                read num4
-                echo "Masukan angka kelima :"
-                read num5
-                echo "Masukan angka keenam :"
-                read num6
+                for (( i = 1; i <= 6; i=i+1 )); do
+                    echo "Masukan angka ke-$i :"
+                    read num$i
+                done
                 # Fungsi urutan operator
                 echo "=================================="
                 echo "[/\] Tentukan urutan operator :"
@@ -256,18 +230,12 @@ do
                 echo "[+] % untuk Modulus"
                 echo "[+] ** untuk Exponentiation"
                 echo "=================================="
-                echo "[?] Operator pertama :"
-                read op1
-                echo "[?] Operator kedua :"
-                read op2
-                echo "[?] Operator ketiga :"
-                read op3
-                echo "[?] Operator keempat :"
-                read op4
-                echo "[?] Operator kelima :"
-                read op5
+                for (( i = 1; i <= 5; i=i+1 )); do
+                    echo "[?] Operator ke-$i :"
+                    read hop$i
+                done
                 # Fungsi menentukan hasil matematika
-                result=$[num1 $op1 num2 $op2 num3 $op3 num4 $op4 num5 $op5 num6]
+                result=$[num1 $hop1 num2 $hop2 num3 $hop3 num4 $hop4 num5 $hop5 num6]
                 echo "=================================="
                 echo "Jawaban : $result"
                 echo "=================================="
@@ -275,20 +243,10 @@ do
             elif [[ $jumlahoperator == "6" ]]; then
                 # Fungsi input angka yang akan di hitung
                 echo "=================================="
-                echo "Masukan angka pertama :"
-                read num1
-                echo "Masukan angka kedua :"
-                read num2
-                echo "Masukan angka ketiga :"
-                read num3
-                echo "Masukan angka keempat :"
-                read num4
-                echo "Masukan angka kelima :"
-                read num5
-                echo "Masukan angka keenam :"
-                read num6
-                echo "Masukan angka ketujuh :"
-                read num7
+                for (( i = 1; i <= 7; i=i+1 )); do
+                    echo "Masukan angka ke-$i :"
+                    read num$i
+                done
                 # Fungsi urutan operator
                 echo "=================================="
                 echo "[/\] Tentukan urutan operator :"
@@ -299,20 +257,12 @@ do
                 echo "[+] % untuk Modulus"
                 echo "[+] ** untuk Exponentiation"
                 echo "=================================="
-                echo "[?] Operator pertama :"
-                read op1
-                echo "[?] Operator kedua :"
-                read op2
-                echo "[?] Operator ketiga :"
-                read op3
-                echo "[?] Operator keempat :"
-                read op4
-                echo "[?] Operator kelima :"
-                read op5
-                echo "[?] Operator keenam :"
-                read op6
+                for (( i = 1; i <= 6; i=i+1 )); do
+                    echo "[?] Operator ke-$i :"
+                    read hop$i
+                done
                 # Fungsi menentukan hasil matematika
-                result=$[num1 $op1 num2 $op2 num3 $op3 num4 $op4 num5 $op5 num6 $op6 num7]
+                result=$[num1 $hop1 num2 $hop2 num3 $hop3 num4 $hop4 num5 $hop5 num6 $hop6 num7]
                 echo "=================================="
                 echo "Jawaban : $result"
                 echo "=================================="
